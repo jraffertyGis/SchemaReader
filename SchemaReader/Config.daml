@@ -21,15 +21,24 @@
       <groups>
         <group id="SchemaReader_Group" caption="Schema Reader" appearsOnAddInTab="true">
           <!-- host controls within groups -->
-          <button refID="SchemaReader_SchemaReaderDockPanelToggle" size="large" />
+          <button refID="SchemaReader_DockPaneToggle" size="large" />
+          <button refID="SchemaReader_Dockpane_ShowButton" size="large" />
         </group>
       </groups>
       <controls>
         <!-- add your controls here -->
-        <button id="SchemaReader_SchemaReaderDockPanelToggle" caption="Button 1" className="SchemaReaderDockPanelToggle" loadOnClick="true" smallImage="Images\GenericButtonBlue16.png" largeImage="Images\GenericButtonBlue32.png">
-          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        <button id="SchemaReader_DockPaneToggle" caption="Show/Hide" className="DockPaneToggle" loadOnClick="true" smallImage="Images\GenericButtonBlue16.png" largeImage="Images\GenericButtonBlue32.png">
+          <tooltip heading="Toggle Reader">Click to show or hide the Schema Reader dock panel.<disabledText /></tooltip>
+        </button>
+        <button id="SchemaReader_Dockpane_ShowButton" caption="Show Dockpane " className="Dockpane_ShowButton" loadOnClick="true" smallImage="Images\GenericButtonPurple16.png" largeImage="Images\GenericButtonPurple32.png">
+          <tooltip heading="Show Dockpane">Show Dockpane<disabledText /></tooltip>
         </button>
       </controls>
+      <dockPanes>
+        <dockPane id="SchemaReader_Dockpane" caption="Dockpane " className="DockpaneViewModel" dock="group" dockWith="esri_core_contentsDockPane">
+          <content className="DockpaneView" />
+        </dockPane>
+      </dockPanes>
     </insertModule>
   </modules>
 </ArcGIS>

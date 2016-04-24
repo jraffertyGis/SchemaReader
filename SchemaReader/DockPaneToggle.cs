@@ -8,7 +8,7 @@ using ArcGIS.Desktop.Framework.Contracts;
 
 namespace SchemaReader
 {
-    internal class SchemaReaderDockPanelToggle : Button
+    internal class DockPaneToggle : Button
     {
         protected override void OnClick()
         {
