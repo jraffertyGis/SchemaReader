@@ -19,11 +19,9 @@ namespace SchemaReader
         /// </summary>
         internal static void Show()
         {
-            DockPane pane = FrameworkApplication.DockPaneManager.Find(_dockPaneID);
-            if (pane == null)
-                return;
+            var pane = FrameworkApplication.DockPaneManager.Find(_dockPaneID);
             
-            pane.Activate();
+            pane?.Activate();
         }
 
         /// <summary>
