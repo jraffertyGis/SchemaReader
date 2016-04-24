@@ -12,7 +12,7 @@ namespace SchemaReader
     {
         private const string _dockPaneID = "SchemaReader_Dockpane";
 
-        protected DockpaneViewModel() { }
+
 
         /// <summary>
         /// Show the DockPane.
@@ -22,7 +22,7 @@ namespace SchemaReader
             DockPane pane = FrameworkApplication.DockPaneManager.Find(_dockPaneID);
             if (pane == null)
                 return;
-
+            
             pane.Activate();
         }
 
@@ -40,14 +40,14 @@ namespace SchemaReader
         }
     }
 
-    /// <summary>
-    /// Button implementation to show the DockPane.
-    /// </summary>
-    internal class Dockpane_ShowButton : Button
-    {
-        protected override void OnClick()
-        {
-            DockpaneViewModel.Show();
-        }
-    }
+    ///// <summary>
+    ///// Button implementation to show the DockPane.
+    ///// </summary>
+    //internal class Dockpane_ShowButton : Button
+    //{
+    //    protected override void OnClick()
+    //    {
+    //        DockpaneViewModel.Show();
+    //    }
+    //}
 }
