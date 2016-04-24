@@ -1,43 +1,35 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ArcGIS defaultAssembly="SchemaReader.dll"
-        defaultNamespace="SchemaReader"
-        xmlns="http://schemas.esri.com/DADF/Registry"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
-
+﻿<ArcGIS defaultAssembly="SchemaReader.dll" defaultNamespace="SchemaReader" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
   <AddInInfo id="{5c496e3b-94ea-43ba-a0d4-caa370dc28b7}" version="1.0" desktopVersion="1.2.5023">
-    <Name>SchemaReader</Name>   
-    <Description>SchemaReader description</Description>
+    <Name>SchemaReader</Name>
+    <Description>Tool that displays schema information.</Description>
     <Image>Images\AddinDesktop32.png</Image>
     <Author>James Rafferty</Author>
-    <Company>Acme</Company>
+    <Company>Bernalillo County Public Works</Company>
     <Date>4/23/2016 11:28:49 PM, 2016</Date>
     <Subject>Framework</Subject>
     <!-- Note subject can be one or more of these topics:
                     Content, Framework, Editing, Geodatabase, Geometry, Geoprocessing, Layouts, Map Authoring, Map Exploration -->
   </AddInInfo>
-
   <modules>
     <insertModule id="SchemaReader_Module" className="SchemaReaderModule" autoLoad="false" caption="SchemaReaderModule">
       <!-- uncomment to have the control hosted on a separate tab-->
       <tabs>
-        <!--<tab id="SchemaReader_Tab1" caption="New Tab">
-          <group refID="SchemaReader_Group1"/>
-        </tab>-->
+        <tab id="Bernco_Tab" caption="Bernco">
+          <group refID="SchemaReader_Group" />
+        </tab>
       </tabs>
-              
       <groups>
-        <!-- comment this out if you have no controls on the Addin tab to avoid
-              an empty group-->
-        <group id="SchemaReader_Group1" caption="Group 1" appearsOnAddInTab="true">
+        <group id="SchemaReader_Group" caption="Schema Reader" appearsOnAddInTab="true">
           <!-- host controls within groups -->
+          <button refID="SchemaReader_SchemaReaderDockPanelToggle" size="large" />
         </group>
       </groups>
-      
       <controls>
         <!-- add your controls here -->
-      </controls> 
-      
+        <button id="SchemaReader_SchemaReaderDockPanelToggle" caption="Button 1" className="SchemaReaderDockPanelToggle" loadOnClick="true" smallImage="Images\GenericButtonBlue16.png" largeImage="Images\GenericButtonBlue32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+      </controls>
     </insertModule>
   </modules>
 </ArcGIS>

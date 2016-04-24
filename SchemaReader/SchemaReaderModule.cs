@@ -16,13 +16,7 @@ namespace SchemaReader
         /// <summary>
         /// Retrieve the singleton instance to this module here
         /// </summary>
-        public static SchemaReaderModule Current
-        {
-            get
-            {
-                return _this ?? (_this = (SchemaReaderModule)FrameworkApplication.FindModule("SchemaReader_Module"));
-            }
-        }
+        public static SchemaReaderModule Current => _this ?? (_this = (SchemaReaderModule)FrameworkApplication.FindModule("SchemaReader_Module"));
 
         #region Overrides
         /// <summary>
