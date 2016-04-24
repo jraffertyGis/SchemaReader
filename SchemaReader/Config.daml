@@ -18,7 +18,7 @@
   </AddInInfo>
 
   <modules>
-    <insertModule id="SchemaReader_Module" className="Module1" autoLoad="false" caption="Module1">
+    <insertModule id="SchemaReader_Module" className="SchemaReaderModule" autoLoad="false" caption="SchemaReaderModule">
       <!-- uncomment to have the control hosted on a separate tab-->
       <tabs>
         <!--<tab id="SchemaReader_Tab1" caption="New Tab">

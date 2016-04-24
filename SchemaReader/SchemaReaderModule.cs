@@ -9,18 +9,18 @@ using System.Threading.Tasks;
 
 namespace SchemaReader
 {
-    internal class Module1 : Module
+    internal class SchemaReaderModule : Module
     {
-        private static Module1 _this = null;
+        private static SchemaReaderModule _this = null;
 
         /// <summary>
         /// Retrieve the singleton instance to this module here
         /// </summary>
-        public static Module1 Current
+        public static SchemaReaderModule Current
         {
             get
             {
-                return _this ?? (_this = (Module1)FrameworkApplication.FindModule("SchemaReader_Module"));
+                return _this ?? (_this = (SchemaReaderModule)FrameworkApplication.FindModule("SchemaReader_Module"));
             }
         }
 
