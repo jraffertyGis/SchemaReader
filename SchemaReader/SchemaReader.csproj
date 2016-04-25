@@ -91,6 +91,8 @@
     <Compile Include="DockPaneToggle.cs" />
     <Compile Include="Daml.cs" />
     <Compile Include="DockpaneViewModel.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="SchemaField.cs" />
     <Compile Include="SchemaReaderModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

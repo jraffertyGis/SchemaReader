@@ -17,13 +17,16 @@ namespace SchemaReader
         protected override Task InitializeAsync()
         {
             INotifyCollectionChanged selectedProjectItems = Project.Current.SelectedItems;
-            selectedProjectItems.CollectionChanged += SelectedProjectItemsOnCollectionChanged;
+            selectedProjectItems.CollectionChanged += OnSelectedProjectItemsCollectionChanged;
             return base.InitializeAsync();
         }
 
-        private void SelectedProjectItemsOnCollectionChanged(object sender, NotifyCollectionChangedEventArgs notifyCollectionChangedEventArgs)
+        private void OnSelectedProjectItemsCollectionChanged(object sender, NotifyCollectionChangedEventArgs notifyCollectionChangedEventArgs)
         {
-            var bob = 1;
+            var selectedProjectItems = Project.Current.SelectedItems;
+            if (selectedProjectItems.Count != 1) return;
+            var selectedItem = selectedProjectItems[0];
+            Item ted;
         }
 
         /// <summary>
@@ -31,18 +34,14 @@ namespace SchemaReader
         /// </summary>
         internal static void Show()
         {
-            var pane = FrameworkApplication.DockPaneManager.Find(_dockPaneID);
-            var bob = Project.Current.SelectedItems;
-            var ted = (INotifyCollectionChanged) bob;
-            
-           
+            var pane = FrameworkApplication.DockPaneManager.Find(_dockPaneID);           
             pane?.Activate();
         }
 
         /// <summary>
         /// Text shown near the top of the DockPane.
         /// </summary>
-        private string _heading = "My DockPane";
+        private string _heading = "Schema Reader";
         public string Heading
         {
             get { return _heading; }

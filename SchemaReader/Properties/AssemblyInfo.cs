@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("SchemaReader")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("ArcGIS Pro Add-In.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Acme")]
+[assembly: AssemblyCompany("Bernalillo County Public Works")]
 [assembly: AssemblyProduct("SchemaReader")]
-[assembly: AssemblyCopyright("Copyright © Acme 2016")]
+[assembly: AssemblyCopyright("Copyright © Bernalillo County Public Works 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
