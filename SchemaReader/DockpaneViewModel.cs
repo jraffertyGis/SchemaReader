@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ArcGIS.Desktop.Core;
 using ArcGIS.Desktop.Framework;
 using ArcGIS.Desktop.Framework.Contracts;
 
@@ -12,7 +14,17 @@ namespace SchemaReader
     {
         private const string _dockPaneID = "SchemaReader_Dockpane";
 
+        protected override Task InitializeAsync()
+        {
+            INotifyCollectionChanged selectedProjectItems = Project.Current.SelectedItems;
+            selectedProjectItems.CollectionChanged += SelectedProjectItemsOnCollectionChanged;
+            return base.InitializeAsync();
+        }
 
+        private void SelectedProjectItemsOnCollectionChanged(object sender, NotifyCollectionChangedEventArgs notifyCollectionChangedEventArgs)
+        {
+            var bob = 1;
+        }
 
         /// <summary>
         /// Show the DockPane.
@@ -20,7 +32,10 @@ namespace SchemaReader
         internal static void Show()
         {
             var pane = FrameworkApplication.DockPaneManager.Find(_dockPaneID);
+            var bob = Project.Current.SelectedItems;
+            var ted = (INotifyCollectionChanged) bob;
             
+           
             pane?.Activate();
         }
 
