@@ -5,17 +5,26 @@ This will be messy. First ArcGIS Pro Add-in attempt. Really weak exposure to WPF
 
 This is a re-write of an ArcCatalog add-in.
 
-This add-in will give the user a toggleable pane that will show them information about a feature class that is currently selected in the
-project pane. This information includes the following columns, one row per field:
-Field Position - The index of the field starting at 1. 
-Field Name
-Field Type - The ESRI data type of the field.
-Max Length - The maximum allows length of the field.
-Character Sample - If the field contains a string, Displays the longest value found, preceded by the length in paranthesis.
-Precision Sample - If the field contains a float point type such as double, displays the largest value found preceded by the length 
-  in paranthesis
-Scale Sample - If the field contains a floating point type such as double, displays the largest value found preceded by the length 
-  of the mantissa.
+This add-in will give the user a toggleable pane that will show them information about a feature class or shapefile that is 
+currently selected in the project pane. 
+
+The information displayed includes the following columns, one row per field:
+
+  Field Position - The index of the field starting at 1. 
+
+  Field Name
+
+  Field Type - The ESRI data type of the field.
+
+  Max Length - The maximum allows length of the field.
+
+  Character Sample - If the field contains a string, Displays the longest value found, preceded by the length in paranthesis.
+
+  Precision Sample - If the field contains a float point type such as double, displays the largest value found preceded by the length 
+    in paranthesis
+
+  Scale Sample - If the field contains a floating point type such as double, displays the largest value found preceded by the length 
+    of the mantissa.
 
 The ObjectID and Shape fields are ignored. 
 
